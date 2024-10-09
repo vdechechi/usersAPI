@@ -36,13 +36,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configure DbContext with SQL Server
-builder.Services.AddDbContext<DataContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
+/*builder.Services.AddDbContext<DataContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));*/
+
+builder.Services.AddDbContext<DbContext>(opt => opt.UseInMemoryDatabase("Database"));
 
 // Register DataContext as a scoped service
-builder.Services.AddScoped<DataContext, DataContext>();
 
 var app = builder.Build();
+
+app.UseAuthentication();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -54,7 +57,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseAuthentication();
+
 
 app.MapControllers();
 

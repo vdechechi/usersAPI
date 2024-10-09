@@ -72,3 +72,4 @@ C:\Users\mateu\source\repos\BALTACRUD\bin\Debug\net6.0\Microsoft.AspNetCore.Auth
 C:\Users\mateu\source\repos\BALTACRUD\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\mateu\source\repos\BALTACRUD\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\mateu\source\repos\BALTACRUD\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\mateu\source\repos\BALTACRUD\obj\Debug\net6.0\BALTACRUD.sourcelink.json
